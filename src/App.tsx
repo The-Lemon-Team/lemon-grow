@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { PrivateRoute } from "./modules/auth/containers";
 import { AuthScreenContainer } from "./modules/auth/containers";
 
 import "./App.css";
+import { MainPage } from "./modules/common/components/MainPage";
 
 function App() {
   return (
@@ -13,9 +13,9 @@ function App() {
         <Route
           path="/"
           element={
-            <PrivateRoute>
+            <MainPage>
               <div>THE APP</div>
-            </PrivateRoute>
+            </MainPage>
           }
         />
         <Route path="/auth" element={<AuthScreenContainer />} />
