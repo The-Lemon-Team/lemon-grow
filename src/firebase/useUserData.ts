@@ -16,7 +16,7 @@ export function useUserData() {
   const { user } = useFirebaseAuth();
   const userDoc = doc(getFirestore(firebaseApp), `userData/${user?.uid}`);
   const [userData] = useDocumentData(userDoc);
-  console.log(userData);
+  // console.log(userData);
   const setPlantRef = useCallback(
     (plantDoc: DocumentReference<DocumentData>) => {
       setDoc(userDoc, {

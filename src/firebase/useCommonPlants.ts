@@ -8,5 +8,5 @@ export const useCommonPlants = () => {
     collection(getFirestore(firebaseApp), "plants")
   );
 
-  console.log(values);
+  return values || [];
 };
